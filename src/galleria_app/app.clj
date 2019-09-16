@@ -6,10 +6,6 @@
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]))
 
-(gen-class
-
- :name galleria-app.app)
-
 (defn welcome []
   {:status 200
    :headers {"Content-Type" "text/plain"}
