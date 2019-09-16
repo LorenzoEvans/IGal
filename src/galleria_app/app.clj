@@ -10,7 +10,7 @@
 (defn welcome []
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body [:h1 "Welcome To The Immutable Gallery"]})
+   :body (html [:h1 "Welcome To The Immutable Gallery"])})
 
 (defroutes app-routes
            (GET "/" []
