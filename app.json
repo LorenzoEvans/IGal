@@ -1,0 +1,6 @@
+{
+  "name": "Galleria",
+  "description": "Generative design gallery.",
+  "image": "heroku/clojure",
+  "addons": ["heroku-postgresql"]
+}
