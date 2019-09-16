@@ -10,4 +10,5 @@
             :plugins [[environ/environ.lein "0.3.1"]]
             :hooks [environ.leiningen.hooks]
             :uberjar-name "Galleria.jar"
-            :main galleria-app.app)
+            :main galleria-app.app
+            :profiles {:uberjar {:aot :all}})
