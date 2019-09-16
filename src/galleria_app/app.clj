@@ -5,12 +5,12 @@
             [clojure.java.io :as io]
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
-            [hiccup.core]))
+            [hiccup.core :refer :all]))
 
 (defn welcome []
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body (html [:h1 "Welcome To The Immutable Gallery"])})
+   :body [:h1 "Welcome To The Immutable Gallery"]})
 
 (defroutes app-routes
            (GET "/" []
