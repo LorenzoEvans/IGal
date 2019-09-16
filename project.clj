@@ -9,4 +9,5 @@
             :min-lein-version "2.0.0"
             :plugins [[environ/environ.lein "0.3.1"]]
             :hooks [environ.leiningen.hooks]
-            :uberjar-name "Galleria.jar")
+            :uberjar-name "Galleria.jar"
+            :main galleria-app.app)
