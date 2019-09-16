@@ -11,11 +11,11 @@
    :headers {"Content-Type" "text/plain"}
    :body "Hello from the Immutable Galleria"})
 
-(defroute app-routes
-          (GET "/" []
-               (welcome))
-          (ANY "*" []
-               (route/not-found (slurp (io/resource "404.html")))))
+(defroutes app-routes
+           (GET "/" []
+                (welcome))
+           (ANY "*" []
+                (route/not-found (slurp (io/resource "404.html")))))
 
 (defn -main [& [port]]
   (let [port (Integer. (or port (env :port) 500))]
