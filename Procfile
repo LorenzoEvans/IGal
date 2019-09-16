@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/galleria.jar galleria-app.main -m galleria-app.app
+web: lein with-profile production trampoline run -m galleria-app.app
