@@ -19,10 +19,10 @@
                 (layout/application "Home" (contents/index)))
            (route/resources "/")
            (ANY "*" []
-                (route/not-found (slurp (io/resource "404.html")))))
+                (route/not-found (layout/application "Page Not Found" (contents/not-found)))))
 
 (defn application (handler/site app-routes))
 
 (defn -main [& [port]]
   (let [port (Integer. (or port (env :port) 500))]
-    (jetty/run-jetty (site #'app-routes) {:port port :join? false})))
+    (jetty/run-jetty application {:port port :join? false})))
