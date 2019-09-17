@@ -5,6 +5,8 @@
             [clojure.java.io :as io]
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
+            [hiccup.core :refer :all]
+            [hiccup.page :refer :all]
             [hiccup.core :refer :all]))
 
 (defn welcome []
