@@ -6,13 +6,13 @@
             [ring.adapter.jetty :as jetty]
             [environ.core :refer [env]]
             [hiccup.core :refer :all]
-            [hiccup.page :refer :all]
-            [hiccup.core :refer :all]))
+            [galleria-app.views.layout :as layout]
+            [galleria-app.views.contents :as contents]))
 
 (defn welcome []
   {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body (html [:h1 {:class "IGal-header"} "Welcome To The Immutable Gallery"])})
+   :headers {"Content-Type" "text/plain"}
+   :body (html [:h1 "Welcome To The Immutable Gallery"])})
 
 (defroutes app-routes
            (GET "/" []
