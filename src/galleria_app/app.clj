@@ -16,9 +16,12 @@
 
 (defroutes app-routes
            (GET "/" []
-                (welcome))
+                (layout/application "Home" (contents/index)))
+           (route/resources "/")
            (ANY "*" []
                 (route/not-found (slurp (io/resource "404.html")))))
+
+(defn application (handler/site app-routes))
 
 (defn -main [& [port]]
   (let [port (Integer. (or port (env :port) 500))]
