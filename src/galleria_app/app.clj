@@ -11,7 +11,7 @@
 
 (defn welcome []
   {:status 200
-   :headers {"Content-Type" "text/plain"}
+   :headers {"Content-Type" "text/html"}
    :body (html [:h1 "Welcome To The Immutable Gallery"])})
 
 (defroutes app-routes
