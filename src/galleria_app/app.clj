@@ -12,7 +12,7 @@
 (defn welcome []
   {:status 200
    :headers {"Content-Type" "text/html"}
-   :body (html [:h1 "Welcome To The Immutable Gallery"])})
+   :body (html [:h1 {:class "IGal-header"} "Welcome To The Immutable Gallery"])})
 
 (defroutes app-routes
            (GET "/" []
