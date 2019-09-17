@@ -1,6 +1,6 @@
 (ns galleria-app.views.contents
   (:require [hiccup.form]
-            [hiccup.element :only (link-to)]))
+            [hiccup.element :refer [link-to]]))
 
 (defn index []
   [:div {:id "content"}

@@ -1,6 +1,6 @@
 (ns galleria-app.app
   (:require [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
-            [compojure.handler :refer [site]]
+            [compojure.handler :as handler :refer [site]]
             [compojure.route :as route]
             [clojure.java.io :as io]
             [ring.adapter.jetty :as jetty]
@@ -21,7 +21,7 @@
            (ANY "*" []
                 (route/not-found (layout/application "Page Not Found" (contents/not-found)))))
 
-(defn application (handler/site app-routes))
+(def application  (handler/site app-routes))
 
 (defn -main [& [port]]
   (let [port (Integer. (or port (env :port) 500))]
